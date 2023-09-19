@@ -55,3 +55,28 @@ app.get("/update/:id", async (req, res) => {
     }
 });
 
+app.post("/update/:id" ,async (req, res) => {
+    try {
+        const data = { title: req.body.title, author: req.body.author };
+        await axios.HttpStatusCode(base_url + '/books/' + req.params.id, data);
+        res.redirect("/");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error');
+    }
+});
+
+app.get("/delete/:id", async (req, res) => {
+    try {
+        await axios.delete(base_url + '/books/' + req.params.id);
+            res.redirect("/");
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Error');
+    }
+});
+
+app.listen(5500, () => {
+            console.log('Server started on port 5500');
+            });
+
