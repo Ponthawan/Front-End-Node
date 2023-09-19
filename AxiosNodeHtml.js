@@ -3,7 +3,7 @@ const axios = require('axios');
 const app = express();
 var bodyParser = require('body-parser');
 
-const base_url = "http://localhost:3000";
+const base_url = "http://10.104.14.154";
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.json());
@@ -78,7 +78,7 @@ app.get("/delete/:id", async (req, res) => {
     }
 });
 
-app.listen(80, () => {
-            console.log('Server started on port 80');
+app.listen(8080, () => {
+            console.log('Server started on port 8080');
             });
 
