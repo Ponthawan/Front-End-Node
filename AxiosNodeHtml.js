@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 
 
-const base_url = 'node50171-pornthawan.proen.app.ruk-com.cloud';
+const base_url = 'http://node50113-supakorn.proen.app.ruk-com.cloud';
 
 
 app.set('view engine', 'ejs');
