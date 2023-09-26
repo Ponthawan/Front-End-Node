@@ -6,7 +6,7 @@ const path = require("path");
 
 
 
-const base_url = 'http://node50113-supakorn.proen.app.ruk-com.cloud';
+const base_url = 'http://node50171-pornthawan.proen.app.ruk-com.cloud';
 
 app.set("views", path.join(__dirname, "/public/views"));
 app.set("view engine", "ejs");
